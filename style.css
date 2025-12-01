@@ -1,0 +1,356 @@
+
+:root {
+    --purple: #897bca;
+    --purple-dark: #4b2ed3;
+    --dark: #111014;
+    --light: #ffffff;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 15px 40px;
+    background: var(--dark);
+    color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.logo span {
+    color: var(--purple);
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    margin-left: 720px;
+
+}
+.nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+.nav a:hover {
+    color: var(--purple);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--dark);
+    color: var(--light);
+    height: 60px ;
+    margin-top: 30px;
+    align-items: center;
+}
+
+
+
+.footer-bottom {
+    text-align: center;
+    color: #999;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+/* RESPONSIVE NAV */
+@media(max-width: 820px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: var(--dark);
+        position: absolute;
+        right: 0;
+        top: 65px;
+        padding: 20px;
+        width: 200px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        color: white;
+    }
+}
+
+
+
+
+
+
+
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f7f3ff;
+    color: #2d2d2d;
+    line-height: 1.6;
+}
+
+/* Utility Container */
+section {
+    padding: 80px 10%;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color:  #4e4188;;
+    font-weight: 700;
+}
+
+.img1 {
+    width: 100%;
+    height: 400px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #7d3cff, #a56bff);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 20px rgba(132, 100, 196, 0.4);
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #534769;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero-img {
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------
+   SERVICES SECTION
+------------------------------ */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e6d9ff;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 25px #534769;
+}
+
+/* ------------------------------
+   WORKFLOW SECTION
+------------------------------ */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.workflow-step {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #8b52ff;
+    transition: 0.3s;
+}
+
+.workflow-step:hover {
+    transform: translateX(8px);
+}
+
+/* ------------------------------
+   PRICING SECTION
+------------------------------ */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.price-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #e4d7ff;
+}
+
+.price-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 25px rgba(125, 60, 255, 0.3);
+}
+
+.price-box.highlight {
+    background: linear-gradient(135deg, #7d3cff, #a76fff);
+    color: #fff;
+}
+
+.price-box.highlight ul li {
+    color: #fff;
+}
+
+.price {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+/* ------------------------------
+   TEAM SECTION
+------------------------------ */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+.team-member4 {
+    width: 200px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+.team-member:hover {
+    transform: translateY(-8px);
+}
+.team-member4:hover {
+    transform: translateY(-8px);
+}
+
+.team-member img {
+
+    border-radius: 50%;
+    margin-bottom: 10px;
+    
+}
+.team-member4 img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+/* ------------------------------
+   CTA SECTION
+------------------------------ */
+.cta {
+    font-size: larger;
+    text-align: center;
+    background: linear-gradient(135deg, #7f32ff, #a974ff);
+    color: #fff;
+    padding: 90px 10%;
+    border-radius: 15px;
+}
+
+.cta .btn {
+    background: #fff;
+    color: #7a2fff;
+}
+
+.cta .btn:hover {
+    background: #f4e8ff;
+}
+
+/* ------------------------------
+   SMOOTH SCROLL ANIMATIONS
+------------------------------ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+}
