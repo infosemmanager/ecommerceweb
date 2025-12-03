@@ -120,6 +120,21 @@ body {
     margin: 10px 0;
 }
 
+.hero {
+    background-image: url('.jpg');  /* Path to your background image */
+    background-size: cover;      /* Make image cover entire section */
+    background-position: center; /* Keep subject centered */
+    background-repeat: no-repeat;/* Prevent repetition */
+    
+    height: 80vh;                /* Section height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+
 .btn {
     padding: 12px 25px;
     background: black;
