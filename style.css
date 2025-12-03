@@ -121,7 +121,7 @@ body {
 }
 
 .hero {
-    background-image: url('.jpg');  /* Path to your background image */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUAw_LBeFstdpqaN9yd67u_4hJtDGMF3UHbM5R_aF6_f7RFLCeMkjV5LQ&s');  /* Path to your background image */
     background-size: cover;      /* Make image cover entire section */
     background-position: center; /* Keep subject centered */
     background-repeat: no-repeat;/* Prevent repetition */
